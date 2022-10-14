@@ -67,6 +67,8 @@ class ListTodo extends React.Component {
 
     return (
       <div className="list-todo-container">
+        <p>Simple TODO apps with GauMap</p>
+
         <AddTodo addNewTodo={this.addNewTodo} />
         <div className="list-todo-content">
           {listTodos && listTodos.length > 0 &&
