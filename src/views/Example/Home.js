@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
+import Color from "../HOC/Color";
 
 function withRouter(Component) {
   function ComponentWithRouterProp(props) {
@@ -14,9 +15,9 @@ function withRouter(Component) {
 
 class Home extends React.Component {
   componentDidMount() {
-      setTimeout(() => {
-        this.props.router.navigate('/todo')
-      }, 3000)
+    // setTimeout(() => {
+    //   this.props.router.navigate("/todo");
+    // }, 3000);
   }
   //HOC: higher order component
   render() {
@@ -24,4 +25,5 @@ class Home extends React.Component {
     return <div>Hello world from Homepage with GauMap</div>;
   }
 }
-export default withRouter(Home);
+// export default withRouter(Home);
+export default Color(Home);
